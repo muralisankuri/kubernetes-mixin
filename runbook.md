@@ -224,6 +224,11 @@ This page collects this repositories alerts and begins the process of describing
 + *Severity*: warning
 + *Runbook*: [Link](https://runbooks.prometheus-operator.dev/runbooks/kubernetes/kubeaggregatedapidown/)
 
+##### Alert Name: PodOOMKilled
++ *Message*: `Pod {{ $labels.kubernetes_namespace }}/{{ $labels.kubernetes_pod_name }} was restarted {{ printf "%.0f" $value }} times within the last 30m due to Out of memory issue.`
++ *Severity*: warning
++ *Runbook*: [Link](https://runbooks.prometheus-operator.dev/runbooks/kubernetes/kubepodcrashlooping/)
+
 ### Group Name: "kube-apiserver-slos"
 ##### Alert Name: "KubeAPIErrorBudgetBurn"
 + *Message*: `The API server is burning too much error budget.`
